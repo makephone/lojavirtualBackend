@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://tiago:12345@cluster0-hf1dd.gcp.mongodb.net/lojavirtual?retryWrites=true&w=majority";
+const uri = "mongodb+srv://user:senha@cluster0-hf1dd.gcp.mongodb.net/lojavirtual?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 const porta=process.env.PORT||8080;
 client.connect((err, client) => {
